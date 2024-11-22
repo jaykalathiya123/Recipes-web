@@ -35,12 +35,12 @@ const RecipeForm = () => {
   
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-teal-400 to-green-600 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
-        <h2 className="text-2xl font-bold text-center text-green-700 mb-6">
+    <div className="min-h-screen bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-700 flex items-center justify-center p-4">
+      <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 md:p-8 lg:max-w-xl">
+        <h2 className="text-3xl font-extrabold text-center text-purple-800 mb-6">
           Add a New Recipe
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* Recipe Title */}
           <div>
             <label className="block text-gray-700 font-medium mb-1">
@@ -52,11 +52,11 @@ const RecipeForm = () => {
               value={recipe.title}
               onChange={handleChange}
               placeholder="Enter recipe title"
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
               required
             />
           </div>
-
+  
           {/* Ingredients */}
           <div>
             <label className="block text-gray-700 font-medium mb-1">
@@ -67,12 +67,12 @@ const RecipeForm = () => {
               value={recipe.ingredients}
               onChange={handleChange}
               placeholder="List ingredients separated by commas"
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
               rows="3"
               required
             ></textarea>
           </div>
-
+  
           {/* Instructions */}
           <div>
             <label className="block text-gray-700 font-medium mb-1">
@@ -83,15 +83,15 @@ const RecipeForm = () => {
               value={recipe.instructions}
               onChange={handleChange}
               placeholder="Write step-by-step instructions"
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
               rows="5"
               required
             ></textarea>
           </div>
-
+  
           {/* Recipe Timing */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0">
+            <label className="block text-gray-700 font-medium">
               Recipe Timing (in minutes)
             </label>
             <input
@@ -100,15 +100,15 @@ const RecipeForm = () => {
               value={recipe.timing}
               onChange={handleChange}
               placeholder="e.g., 30"
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full sm:w-40 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
               required
             />
           </div>
-
+  
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-teal-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300"
+            className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-3 px-4 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition duration-300"
           >
             Add Recipe
           </button>
@@ -116,6 +116,7 @@ const RecipeForm = () => {
       </div>
     </div>
   );
+  
 };
 
 export default RecipeForm;

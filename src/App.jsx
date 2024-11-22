@@ -6,6 +6,9 @@ import Home from './componets/Home/Home'
 import RecipeForm from './componets/From/From'
 import ViewData from './componets/ViewData/ViewData'
 import EditFrom from './componets/EditForm/EditForm'
+import ViewRcipes from './componets/ViewRecipes/VeiwRecipes'
+import LoginFrom from './componets/Login-From/Login-From'
+import RegisterForm from './componets/RegisterForm/RegisterForm'
 
 function App() {
 
@@ -20,6 +23,12 @@ function App() {
         <Route path = "/viewrecipe" element = {<ViewData/>}/>
 
         <Route path='/EditData/:id' element={<EditFrom />} />
+
+        <Route path='/ViewRcipes/:id' element={<ViewRcipes />} />
+
+        <Route path='/LoginFrom' element={<LoginFrom />} />
+
+        <Route path='/registerform' element = {<RegisterForm/>}/>
 
 
 
